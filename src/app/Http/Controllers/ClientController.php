@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+use App\Models\Client;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class ClientController extends Controller
 {
+    
     public function index()
     {
-        $data = Product::all();
+        $data = Client::all();
         return response()->json([
-            'message' => 'List of products',
+            'message' => 'List of clients',
             'data' => $data
         ], 200);
     }
